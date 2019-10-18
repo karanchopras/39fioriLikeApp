@@ -1,0 +1,14 @@
+{
+  "generation": [
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Thu, 04 Apr 2019 02:17:13 GMT"
+    }
+  ],
+  "basevalidator": {
+    "services": {
+      "js": "jsValidator"
+    }
+  }
+}

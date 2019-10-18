@@ -1,0 +1,50 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+		  xmlns:f="sap.ui.layout.form"	xmlns="sap.m" controllerName="ibm.fin.ar.controller.View2"
+		  xmlns:anubhav="ibm.fin.ar.controls"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Screen 2" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<!--<Button text="Back" press="onBack"></Button>-->
+			<ObjectHeader title="mock element"></ObjectHeader>
+			<ObjectHeader intro="{PRODUCT_ID}" id="myheader"
+			title="{NAME}" number="{PRICE}" numberUnit="{CURRENCY_CODE}"></ObjectHeader>
+			<IconTabBar>
+				<items>
+					<IconTabFilter key="moreData" text="More Data" icon="sap-icon://blank-tag-2">
+						<Image src="{/$value}"></Image>
+						<anubhav:Heading text="spiderman"  color="red" border="5px dashed red"></anubhav:Heading>
+						<anubhav:Heading text="batman" border="2px dotted pink"></anubhav:Heading>
+						<Button text="Normal Btn" press="onPress"></Button>
+						<anubhav:AnubhavButton text="Amazing" hover="onPress"></anubhav:AnubhavButton>
+						<core:Fragment fragmentName="ibm.fin.ar.fragments.moreData" 
+						type="XML"></core:Fragment>
+						<!--<core:Fragment fragmentName="ibm.fin.ar.fragments.moreData" 
+						type="XML"></core:Fragment>-->
+					</IconTabFilter>
+					<IconTabFilter key="supplier" text="Supplier Info" icon="sap-icon://supplier">
+						<core:Fragment fragmentName="ibm.fin.ar.fragments.supplierData" 
+						type="XML"></core:Fragment>
+					</IconTabFilter>
+					<IconTabFilter key="city" text="Cities" icon="sap-icon://functional-location">
+						<Select id="simpleSelect" items="{/cities}">
+							<core:Item text="{name}" key="{name}"></core:Item>
+						</Select>
+						<ComboBox id="inpCumDd" items="{/cities}">
+							<core:Item text="{name}" key="{name}"></core:Item>
+						</ComboBox>
+						<MultiComboBox id="idMulti" items="{/cities}">
+							<core:Item text="{name}" key="{name}"></core:Item>
+						</MultiComboBox>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button text="Save" press="onSave" type="Accept"></Button>
+				<Button text="Cancel" press="onCancel" type="Reject"></Button>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

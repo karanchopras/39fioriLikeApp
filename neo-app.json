@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "NS4",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "SAP Gateway Connection"
+    }
+  ],
+  "welcomeFile": "/index1.html",
+  "sendWelcomeFileRedirect": true
+}

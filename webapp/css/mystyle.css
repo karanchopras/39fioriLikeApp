@@ -1,0 +1,7 @@
+.sapMOHTitleDiv span{
+	color: red;
+}
+.sapMOHTitleDiv span:HOVER{
+	color: aqua;
+	background-color:black;
+}

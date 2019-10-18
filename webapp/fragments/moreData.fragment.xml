@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+	<f:SimpleForm id="supplierForm">
+		<Label text="BP Type"></Label>
+		<Text text="{BP_ROLE}"></Text>
+		<Label text="Name"></Label>
+		<Text text="{COMPANY_NAME}"></Text>
+		<Label text="Location"></Label>
+		<Text text="{CITY} / {COUNTRY}"></Text>
+		<Button text="Olalala..." press="onTest"></Button>
+	</f:SimpleForm>
+</core:FragmentDefinition>

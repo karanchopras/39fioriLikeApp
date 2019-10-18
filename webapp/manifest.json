@@ -1,0 +1,118 @@
+{
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "ibm.fin.ar",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"dataSources": {
+			"anubhavService": {
+				"type": "OData",
+				"uri": "/sap/opu/odata/sap/ZAPR_ODATA_SRV/",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		},
+		"tags": {
+			"keywords": ["{{fruits}}", "{{health}}"]
+		},
+		"ach": "FIN-AR-AC"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_belize", "sap_bluecrystal"],
+		"icons": {
+			"icon": "sap-icon://accept"
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"dependencies": {
+			"minUI5Version": "1.44.11",
+			"libs": {
+				"sap.m": {
+					"minVersion": "1.44.11"
+				},
+				"sap.ui.layout": {
+					"minVersion": "1.44.11"
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/mystyle.css",
+				"id": "mycss"
+			}]
+		},
+		"rootView": {
+			"viewName": "ibm.fin.ar.view.App",
+			"id": "idRootView",
+			"type": "XML",
+			"async": true
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "ibm.fin.ar.view",
+				"controlId": "myApp",
+				"async": true
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "donald",
+				"target": ["donald"]
+			}, {
+				"pattern": "zumba/{myVar}",
+				"name": "trumph",
+				"target": ["donald", "trumph"]
+			}],
+			"targets": {
+				"donald": {
+					"viewName": "View1",
+					"controlAggregation": "masterPages",
+					"viewId": "idView1"
+				},
+				"trumph": {
+					"viewName": "View2",
+					"controlAggregation": "detailPages",
+					"viewId": "idView2"
+				}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {},
+				"uri": "i18n/i18n.properties",
+				"preload": true,
+				"async": true
+			},
+			"": {
+				"dataSource": "anubhavService",
+				"preload": true
+			},
+			"local": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/mockData/fruits.json",
+				"preload": true
+			}
+		}
+	},
+	"_version": "1.9.0"
+}
