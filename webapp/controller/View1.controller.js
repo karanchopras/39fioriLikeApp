@@ -2,7 +2,7 @@ sap.ui.define([
 	"ibm/fin/ar/controller/BaseController"
 ], function (Controller) {
 	"use strict";
-	//test
+	//test2
 	return Controller.extend("ibm.fin.ar.controller.View1", {
 
 		/**
